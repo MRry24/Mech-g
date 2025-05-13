@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mech-G | Engineering Simplified</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f0f0f0; color: #333; }
+
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky; top: 0; z-index: 1000;
+    }
+
+    .logo { font-size: 28px; font-weight: bold; }
+    nav a {
+      color: white; margin: 0 15px; text-decoration: none; font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #00bcd4; }
+
+    .hero {
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      height: 100vh; background: linear-gradient(120deg, #000000, #434343);
+      color: white; text-align: center; padding: 0 20px;
+    }
+    .hero h1 { font-size: 3rem; animation: fadeIn 2s ease; }
+    .hero p { margin-top: 10px; font-size: 1.2rem; color: #ccc; }
+    .hero button {
+      margin-top: 30px; padding: 12px 30px; border: none; background: #00bcd4;
+      color: #fff; font-size: 1rem; border-radius: 5px; cursor: pointer;
+      transition: background 0.3s;
+    }
+    .hero button:hover { background: #0097a7; }
+
+    section {
+      padding: 80px 20px; max-width: 1200px; margin: auto;
+    }
+    .section-title {
+      font-size: 2rem; text-align: center; margin-bottom: 40px; color: #000;
+    }
+    .about, .courses, .ai, .projects, .team, .blog, .contact {
+      background: white; margin-bottom: 30px; border-radius: 8px;
+      padding: 40px; box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    .gear { display: inline-block; animation: rotate 5s linear infinite; margin-right: 8px; }
+
+    @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .team-grid {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;
+      text-align: center;
+    }
+    .member {
+      max-width: 200px;
+    }
+    .member img {
+      width: 100%; border-radius: 50%; border: 4px solid #00bcd4;
+      margin-bottom: 10px;
+    }
+    .member h3 { margin-top: 10px; color: #222; }
+    .member p { font-size: 0.95rem; color: #777; }
+
+    .blog-post {
+      background: #f9f9f9;
+      border-left: 5px solid #00bcd4;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .linkedin-link {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .linkedin-link a {
+      color: #0a66c2; text-decoration: none;
+    }
+
+    footer {
+      text-align: center; padding: 30px; background: #222; color: #bbb;
+    }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; text-align: center; }
+      nav { margin-top: 10px; }
+      .team-grid { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Mech-G ⚙️</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#ai">AI + CAD/CAM</a>
+    <a href="#projects">Projects</a>
+    <a href="#team">Team</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1><span class="gear">⚙️</span>Engineering Simplified</h1>
+  <p>Mechanical Engineering + AI Innovation | Powered by Mech-G</p>
+  <button onclick="window.location='#courses'">Explore Courses</button>
+</section>
+
+<section id="about" class="about">
+  <h2 class="section-title">About Mech-G</h2>
+  <p>Founded by Yogesh, Mech-G is an educational brand dedicated to simplifying mechanical engineering and integrating AI into CAD/CAM. Our mission is to help students and professionals understand concepts with ease and innovate using the latest technologies.</p>
+</section>
+
+<section id="courses" class="courses">
+  <h2 class="section-title">Courses We Offer</h2>
+  <ul>
+    <li>🔧 Mechanical Engineering Fundamentals</li>
+    <li>🔥 Applied Thermodynamics</li>
+    <li>🛠️ CAD Mastery (SolidWorks, Fusion 360)</li>
+    <li>🤖 AI Tools in Design & Manufacturing</li>
+  </ul>
+</section>
+
+<section id="ai" class="ai">
+  <h2 class="section-title">AI + CAD/CAM</h2>
+  <p>Learn how AI is being integrated with design tools to enhance modeling, optimize manufacturing, and improve design workflows. Tutorials, case studies, and real-time projects are all included.</p>
+</section>
+
+<section id="projects" class="projects">
+  <h2 class="section-title">Student Projects</h2>
+  <p>We showcase mechanical prototypes, AI-integrated design models, and more. Stay tuned to explore innovations submitted by our community members and students worldwide.</p>
+</section>
+
+<section id="team" class="team">
+  <h2 class="section-title">Our Core Team</h2>
+  <div class="team-grid">
+    <div class="member">
+      <h3>Yogesh</h3>
+      <p>Founder & CEO</p>
+    </div>
+    <div class="member">
+      <h3>Kousikk</h3>
+      <p>Chief Technology Officer (CTO)</p>
+    </div>
+    <div class="member">
+      <h3>Sundar</h3>
+      <p>Chief Information Officer (CIO)</p>
+    </div>
+  </div>
+</section>
+
+<section id="blog" class="blog">
+  <h2 class="section-title">Latest Blog – Strength of Materials</h2>
+  <div class="blog-post">
+    <h3>Understanding Bending Stress & Beam Theory</h3>
+    <p>
+      Strength of Materials (SoM) is the foundation of mechanical design. One crucial topic is the *bending stress equation*, given by:
+      <br><br><strong>σ = (M*y)/I</strong>
+      <br><br>
+      Where M is the moment, y is the distance from the neutral axis, and I is the moment of inertia. Understanding this helps you design safe beams and structures. Dive into our blog and explore animated simulations and problem-solving tips.
+    </p>
+  </div>
+
+  <div class="linkedin-link">
+    Join our LinkedIn Group for exclusive content:<br>
+    <a href="https://www.linkedin.com/groups/14685073/" target="_blank">🔗 Mech-G LinkedIn Community</a>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2 class="section-title">Connect With Us</h2>
+  <p>Email: contact@mech-g.com</p>
+  <p>LinkedIn (Founder): <a href="https://www.linkedin.com/in/yogesh-ramasubramanian-941453276/" target="_blank">Yogesh Ramasubramanian</a></p>
+</section>
+
+<footer>
+  © 2025 Mech-G. Built by Yogesh and Team – Engineering Simplified.
+</footer>
+
+</body>
+</html>
